@@ -11,11 +11,13 @@ public class SumApp {
 		System.out.println("숫자를 공백으로 구분해서 입력하세요");
 		String numLine = sc.nextLine();
 
-		// 코드를 작성하세요
-		String[] nums = numLine.split(" ");
+		// numLine을 split
+		String[] data = numLine.split(" "); // 공백 문자를 기준으로 분할
 
-		for (String num : nums) {
-			sum += Integer.parseInt(num);
+		// 루프
+		for (int i = 0; i < data.length; i++) {
+			int num = Integer.parseInt(data[i]); // 문자열 -> int
+			sum += num;
 		}
 
 		System.out.println("합:" + sum);

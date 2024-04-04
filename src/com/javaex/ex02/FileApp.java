@@ -10,9 +10,9 @@ public class FileApp {
 		try {
 			fileRead();
 		} catch (IOException e) {
-			System.err.println("Error" + e.getMessage());
-		} finally {
-			System.out.println("파일이 없습니다.");
+			System.err.println("파일이 없습니다.");
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
 	}
 
@@ -21,3 +21,9 @@ public class FileApp {
 		throw new IOException(); // 강제로 예외 발생
 	}
 }
+
+
+
+//	예외처리
+//	checked - 반드시 예외처리 해야한다. , - try ~ catch
+//	unchecked
